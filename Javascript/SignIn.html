@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Epam Sign In</title>
+        <style>
+            h2{
+                border: 2px solid black;
+                color: #fff;
+                margin-top: 100;
+                padding: 5;
+                background-color: darkcyan;
+            }
+            .inp{
+                border: 2px solid black;
+                margin: 10;
+                padding: 5 10;
+            }
+            .btn{
+                border: 2px solid black;
+                margin: 10;
+                padding: 5 74;
+                color: #fff;
+                background-color: darkcyan;
+                
+            }
+            .blue{
+                color: blue;
+            }
+            .eml{
+                color: darkgray;
+                
+            }
+            .fb{
+                margin: 10;
+                padding: 5 90;
+                background-color: #3b5998;
+            }
+            .go{
+                margin: 10;
+                padding: 5 90;
+                background-color: #D44638;
+            }
+            .epam{
+                font-weight: bold;
+                margin: 10;
+                padding: 4 60;
+                background-color: rgb(212, 163, 56);
+            }
+            .tab { 
+                display: inline-block; 
+                margin-left: 30px; 
+            } 
+            i{
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            a{
+                color: black;
+                text-decoration: none;
+            }
+            p{
+                color: lightgrey;
+            }
+            body{
+                margin-left: 550;
+                margin-right: 550;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <center>
+                <h2>Sign In</h2>
+                <fieldset>
+                    
+                    <input class="inp" type = "text" name = "email" placeholder = "Email"><x class="eml"><i class="fa fa-envelope"></i></x><br>
+                    <input class="inp" type = "password" name = "password" placeholder = "Password"><x class="eml"><i class="fa fa-lock"></i></x><br>
+                    <button class="btn" name="signin">Sign In</button> <br>    
+                    <a class = "blue" href="">forgot password?</a><span class="tab"></span><a class = "blue" href="./Register.html">Sign Up!</a>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>OR</legend>
+                    <button class="fb"><a class="fa fa-facebook" href="https://www.facebook.com/"></a></button></br>
+                    <button class="go"><a class="fa fa-google" href="https://mail.google.com/"></a></button><br>
+                    <button class="epam"><a href="https://login.epam.com/">Epam Login</a></button>
+                </fieldset>
+            </center>
+        </form>
+    </body>
+</html>

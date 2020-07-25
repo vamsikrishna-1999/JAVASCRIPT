@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sign Up</title>
+	<style>
+            h2{
+                color: #fff;
+                margin: 100px 500px 10px 500px;
+                padding: 5px;
+                border: 2px solid black;
+                background-color: darkcyan;
+            }
+            .inp{
+            	border: 2px solid black;
+                margin-bottom: 20px;
+                padding: 5px 10px;
+            }
+            .btn{
+            	border: 2px solid black;
+                margin: 10px;
+                padding: 5px 90px;
+                color: #fff;
+                background-color: darkcyan;
+                
+            }
+            .eml{
+            	
+                color: darkgray;
+                padding: 5px 10px;
+            }
+            i{
+			    width: 24px !important;
+			    height: 24px !important;
+            }
+            div{
+            	margin-left: 500px;
+            	margin-right: 500px; 
+            }
+            fieldset{
+            	padding: 30px;
+            }
+    </style>
+    <script>
+			function myFunction() {
+				var email = document.forms['registration']['email'].value;
+				var password = document.forms['registration']['password'].value;
+				var confirmpassword = document.forms['registration']['confirmpassword'].value;
+				var phone = document.forms['registration']['phone'].value;
+				if((email.indexOf("@") < 0)){
+					document.forms['registration']['email'].style.borderColor = "red";
+			  		alert('Invalid Email');
+			  	}
+			  	else if(password.length < 8){
+			  		document.forms['registration']['password'].style.borderColor = "red";
+			  		alert('Password should have atleast 8 characters')
+			  	}
+			  	else if(password != confirmpassword){
+			  		document.forms['registration']['confirmpassword'].style.borderColor = "red";
+			  		alert('Wrong confirmpassword')
+			  	}
+			  	else if(phone.length != 10){
+			  		document.forms['registration']['phone'].style.borderColor = "red";
+			  		alert('Invalid Phone NO')
+			  	}
+			  	else{
+			  		document.forms['registration']['email'].style.borderColor = "red";
+			  		document.forms['registration']['password'].style.borderColor = "red";
+			  		document.forms['registration']['confirmpassword'].style.borderColor = "red";
+			  		document.forms['registration']['phone'].style.borderColor = "red";
+			  		alert('Successfully registered')
+			  	}					  	
+			}		    		
+	</script>
+</head>
+<body>
+	
+	<center>
+		<h2>Sign Up</h2>
+		<div>
+			<fieldset>   
+			<form name='registration' onSubmit=" return myFunction();">             
+		    	<input class="inp" type = "text" name = "email" placeholder = "Email"><x class="eml"><i class="fa fa-envelope"></i></x><br>
+		        <input class="inp" type = "password" name = "password" placeholder = "Password"><x class="eml"><i class="fa fa-lock"></i></x><br>
+		        <input class="inp" type = "password" name = "confirmpassword" placeholder = "Confirm password"><x class="eml"><i class="fa fa-lock"></i></x><br>
+		        <input class="inp" type = "text" name = "phone" placeholder = "Phone No"><x class="eml"><i class="fa fa-mobile-phone"></i></x><br>
+		        <input type="submit" class="btn" name="signup" value="Sign Up"> <br>
+		    </form>
+	    	</fieldset>
+	    	
+		</div>
+    </center>
+</body>
+</html>
